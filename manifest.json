@@ -1,0 +1,53 @@
+{
+"update_url": "https://dummy",
+
+	"manifest_version": 2,
+	"name": "小路香香哒",
+	"version": "1.0.0",
+	"description": "这是为了最好看的喵咪开发的插件",
+	"icons": {
+		"48": "images/xiaolu48.png", 
+		"16": "images/xiaolu16.png", 
+		 "128": "images/xiaolu128.png"
+		},
+	//"chrome_url_overrides": {
+	//    "newtab": "main.html"
+	//  },
+	"browser_action": {
+		"default_icon": {
+			"19": "images/xiaolu19.png",
+			"38": "images/xiaolu38.png" 
+			},
+		"default_title": "小路香香哒",
+		"default_popup": "popup.html"
+		},
+    "options_page": "options.html",
+    	//"content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://apis.google.com https://ajax.googleapis.com; object-src 'self'",
+    "content_scripts": [
+       {
+           "matches": [
+               "http://*/*",
+                "https://*/*",
+               "ftp://*/*"
+           ],
+            "js": [
+               "js/content.js"
+           ]
+       }
+    ],
+    "background":{"scripts":["js/background.js"]},
+    "permissions": ["tabs",
+		"\u003Call_urls\u003E",
+		"cookies",
+		"contextMenus",
+		"unlimitedStorage",
+		"notifications",
+		"storage",
+		"clipboardWrite"
+		, "file://*/"
+		,"http://*/"
+		, "https://*/"
+		,"downloads"
+		]
+
+}

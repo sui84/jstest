@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body, input {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: "Raleway", Arial, "Microsoft YaHei", sans-serif;
+			background: #F9BF45;
+		}
+		input {
+			border: none;
+			background: none;
+			font-size: 16px;
+			outline: none;
+		}
+		#login {
+			width: 340px;
+			padding: 15px;
+			background: rgba(0,0,0,.2);
+			border-radius: 10px;
+			margin: 0 auto;
+			height: 40px;
+			margin-top: 100px;
+		}
+		#login input {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		#text {
+			width: 330px;
+			height: 20px;
+			padding: 10px 5px;
+			border-radius: 3px;
+			background: #f9f9f8;
+			transition: background 0.3s;
+		}
+		#text:focus {
+			background: #fff;
+		}
+		a {
+ 			position: relative;
+		    display: block;
+		    outline: none;
+		    color: #fff;
+		    text-decoration: none;
+		    margin: 50px auto;
+		    text-align: center;
+		    font-size: 40px;
+ 		}
+ 		a::before, a::after {
+			display: inline-block;
+		    opacity: 0;
+		    transition: transform 0.3s, opacity 0.2s;
+		    font-weight: bold;
+		}
+		a::before {
+			margin-right: 10px;
+			content: "[";
+			transform: translateX(20px);
+		}
+		a::after {
+		    margin-left: 10px;
+		    content: ']';
+		    transform: translateX(-20px);
+		}
+		a:hover::before, a:hover::after {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		#choices {
+			text-align: center;
+		}
+		#choices input {
+			width: 150px;
+			border: 3px solid #fff;
+			color: #fff;
+			border-radius: 10px;
+			background: none;
+			padding: 20px 10px;
+			margin: 5px 10px;
+			cursor: pointer;
+			transition: background 0.5s;
+			font-weight: bold;
+		}
+		#choices input:hover {
+			background: #fff;
+			color: #cd4436;
+		}
+	</style>
+</head>
+<body>
+
+</body>
+</html>

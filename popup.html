@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body, input, p {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: "Raleway", Arial, sans-serif;
+			background: #F9BF45;
+                        background-image: url(http://dummy.jpg);
+                        background-repeat:no-repeat;
+                        background-position:100px 310px;
+			width: 400px;
+			height: 400px;
+		}
+		input {
+			border: none;
+			background: none;
+			font-size: 16px;
+			outline: none;
+		}
+		p {
+			text-align: center;
+		}
+		.inputrow {
+			width: 340px;
+			padding: 15px;
+			background: rgba(0,0,0,.2);
+			border-radius: 10px;
+			margin: 10px auto;
+			height: 40px;
+		}
+		.inputrow input {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.txt {
+			width: 270px;
+			height: 20px;
+			padding: 10px 0 10px 5px;
+			border-radius: 3px 0 0 3px;
+			background: #f9f9f8;
+			transition: background 0.3s;
+			float: left;
+		}
+		.txt:focus {
+			background: #fff;
+		}
+		.inputbtn {
+			width: 55px;
+			height: 40px;
+			background: #F9BF45;
+			color: #f9f9f8;
+			float: left;
+			border-radius: 0 3px 3px 0;
+			cursor: pointer;
+		}
+		#choices {
+			width: 370px;
+			margin: 0 auto;
+		}
+		#choices input {
+			width: 145px;
+			border: 3px solid #fff;
+			color: #fff;
+			border-radius: 10px;
+			background: none;
+			padding: 10px 0px;
+			margin: 5px 10px;
+			cursor: pointer;
+			transition: background 0.5s;
+			font-weight: bold;
+		}
+		#choices input:hover {
+			background: #fff;
+			color: #cd4436;
+		}
+		.author {
+			color: #fff;
+			font-size: 12px;
+			margin-top: 5px;
+			text-align: right;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/background-cp.js"></script>
+	<script type="text/javascript" src="js/db.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+</head>
+<body>
+	<div class="inputrow">
+		<input type="text" class='txt' placeholder="" id="text">
+		<input type="button" class='inputbtn' value="清空" id="clear">
+	</div>
+	<div class="inputrow">
+			<input type="text" class='txt' placeholder="file name" id="text-filename">
+			<input type="button" class='inputbtn' value="保存" id="savefile">
+	</div>
+	<div id="choices">
+		<p>
+			<input type="button" id='guowaiwp' value="国外网盘搜索">
+			<input type="button" id='baiduwp' value="百度网盘搜索">
+		</p>
+		<p>
+			<input type="button" id='whois' value="Whois">
+			<input type="button" id='ip' value="IP">
+		</p>
+		<p>
+			<input type="button" id='getcookie' value="Cookies">
+			<input type="button" id='savefile' value="test">
+		</p>
+		<textarea id="info" style="width:350px;height:200px;"></textarea><br />
+	</div>
+
+	<p class="author">xiaolu</p>
+	<script type="text/javascript" src="js/popup.js"></script>
+</body>
+</html>
