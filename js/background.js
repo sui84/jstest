@@ -87,6 +87,11 @@ links.forEach(function(value,index,array){
 		});
 	}
 });
+var parents = chrome.contextMenus.create({"title":"我的右键菜单","contexts":["page","selection"],});
+var child1 = chrome.contextMenus.create(
+  {"title": "我的右键菜单的第一个子菜单", "parentId": parents, "onclick": selectionOnClick,"contexts":["selection"],});
+var child1 = chrome.contextMenus.create(
+  {"title": "我的右键菜单的第二个子菜单", "parentId": parents, "onclick": selectionOnClick,"contexts":["selection"],});
 
 
 //图标上的数字
